@@ -83,6 +83,9 @@
         <item name="windowActionBar">true</item>
         <item name="windowActionModeOverlay">false</item>
         <item name="windowContentOverlay">@null</item>
+        
+		<!-- activity animation -->
+        <item name="android:windowAnimationStyle">@style/ZoomAnimation</item>
     </style>
     <style name="Theme.Sherlock.Light" parent="Sherlock.__Theme.Light">
         <!-- Action bar styles (from Theme.Holo) -->
@@ -203,5 +206,20 @@
     <style name="Theme.Sherlock.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+    
+    <style name="ZoomAnimation">
+  	    <item name="android:activityOpenEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/zoomout</item>
+        <item name="android:taskOpenEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:taskCloseEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:taskCloseExitAnimation">@anim/zoomout</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/slide_left_out</item>
+        <item name="android:taskToBackEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:taskToBackExitAnimation">@anim/zoomout</item>
     </style>
 </resources>
